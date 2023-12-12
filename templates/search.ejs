@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        .game {
+            border: 1px solid black;
+            padding: 25px;
+            width: 25%;
+        }
+
+        .onSale {
+            background-color: green;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+        }
+        
+        .notOnSale {
+            background-color: red;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .search {
+            border: 1px solid black;
+            padding: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-radius: 5px;
+            width: 25%;
+        }
+
+        .submit {
+            border: 1px solid black;
+            padding: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="/">Home</a><br>
+    <a href="/savedGames">View Saved Games</a>
+    
+    <h1>Search</h1>
+    <form action="/search" method="get">
+        <input class="search" type="text" name="title" placeholder="Spiderman">
+        <input class="submit" type="submit" value="submit">
+    </form>
+    <br>
+
+    <div><%- games %></div>
+
+</body>
+</html>
